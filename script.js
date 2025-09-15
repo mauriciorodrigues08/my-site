@@ -42,32 +42,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Formulário de contato
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Simular envio do formulário
-    const button = this.querySelector(".submit-btn");
-    const originalText = button.textContent;
-
-    button.textContent = "Enviando...";
-    button.disabled = true;
-
-    setTimeout(() => {
-      button.textContent = "Mensagem Enviada!";
-      button.style.background = "#28a745";
-
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-        button.style.background = "";
-        this.reset();
-      }, 2000);
-    }, 1500);
-  });
-
 // Efeito parallax no hero
 window.addEventListener("scroll", () => {
   const hero = document.querySelector(".hero");
